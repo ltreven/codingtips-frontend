@@ -38,6 +38,11 @@ class Header extends Component {
                                 CSS
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/home">
+                                Bootstrap
+                            </NavLink>
+                        </li>
                     </ul>
                     <form className="form-inline mt-2 mt-md-0">
                         <input type="text" className="form-control mr-sm-2" placeholder="(search)" />
