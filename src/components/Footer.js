@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../css/style.css';
 
 class Footer extends Component {
     render () {
         return (
-            <div className="footer">
-                
-            </div>
+            <footer className="container">
+                <hr className="featurette-divider" />
+                <p className="float-right">
+                    <NavLink className="nav-link" to="/signup">
+                        Collaborate
+                    </NavLink>
+                </p>
+                <p>
+                    © 2020 Codingtips.
+                </p>
+      </footer>
         );
     }
 }

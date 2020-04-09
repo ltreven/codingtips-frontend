@@ -7,6 +7,9 @@ import HTMLTips from './HTMLTips';
 import CSSTips from './CSSTips';
 import BootstrapTips from './BootstrapTips';
 import Footer from './Footer';
+import Signup from './Signup';
+import CreateAccount from './CreateAccount';
+import Login from './Login';
 
 class Main extends Component {
 
@@ -20,6 +23,9 @@ class Main extends Component {
                     <Route exact path="/html" component={() => <HTMLTips/>} />
                     <Route exact path="/css" component={() => <CSSTips/>} />
                     <Route exact path="/bootstrap" component={() => <BootstrapTips/>} />
+                    <Route exact path="/signup" component={() => <Signup/>} />
+                    <Route exact path="/create-account" component={() => <CreateAccount/>} />
+                    <Route exact path="/login" component={() => <Login/>} />
                     <Redirect to="/home" />
                 </Switch>
                 <Footer/>
