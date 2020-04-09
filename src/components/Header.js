@@ -18,28 +18,28 @@ class Header extends Component {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
+                        <li className="nav-item">
                             <NavLink className="nav-link" to="/home">
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/home">
+                            <NavLink className="nav-link" to="/js">
                                 JS
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/home">
+                            <NavLink className="nav-link" to="/html">
                                 HTML
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/home">
+                            <NavLink className="nav-link" to="/css">
                                 CSS
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/home">
+                            <NavLink className="nav-link" to="/bootstrap">
                                 Bootstrap
                             </NavLink>
                         </li>
