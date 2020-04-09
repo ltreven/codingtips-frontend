@@ -1,1 +1,1 @@
-export const baseImgUrl = 'http://api.codingtips.online/img/';
+export const baseImgUrl = 'https://api.codingtips.online/img/';
