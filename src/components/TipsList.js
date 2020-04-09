@@ -7,32 +7,51 @@ class TipsList extends Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
             tips: [],
+            search: this.props.search || '',
+            tech: this.props.tech || '',
+            limit: 20,
+            offset: 0,
+            nomore: false,
             error: null
         };
 
         this.loadTips();
     }
 
-    loadTips = () => {
-        let url = baseUrl + 'tips/';
-        if (this.props.tech) {
-            url += '?technology=' + this.props.tech;
+    loadTips() {
+        const nexttips = this.state.tips;
+        let filter = '?limit=' + this.state.limit +
+                    '&offset=' + this.state.offset;
+
+        if (this.state.search) {
+            filter += '&search=' + this.state.search;
         }
-        fetch(url)
+        if (this.state.tech) {
+            filter += '&technology=' + this.state.tech;
+        }
+            
+        fetch(baseUrl + 'tips/?' + filter)
         .then(res => res.json())
         .then(tips => this.setState({
-            tips: tips,
+            tips: [...nexttips, ...tips ],
+            //offset: this.state.offset + this.state.limit,
+            nomore: tips.length === 0,
             error: null
             }))
         .catch((err) => {
-            const msg = "Could not load data from " + url;
+            const msg = "Could not load data.";
             console.log(msg, err);
             this.setState({
                 error: msg
             })
         });
+    }
+
+    loadMore(event) {
+        this.loadTips();
     }
 
     render () {

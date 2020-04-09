@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Signup from './Signup';
 import CreateAccount from './CreateAccount';
 import Login from './Login';
+import Results from './Results';
 
 class Main extends Component {
 
@@ -26,6 +27,7 @@ class Main extends Component {
                     <Route exact path="/signup" component={() => <Signup/>} />
                     <Route exact path="/create-account" component={() => <CreateAccount/>} />
                     <Route exact path="/login" component={() => <Login/>} />
+                    <Route exact path="/results" component={() => <Results/>} />
                     <Redirect to="/home" />
                 </Switch>
                 <Footer/>

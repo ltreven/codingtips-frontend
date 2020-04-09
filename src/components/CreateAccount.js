@@ -177,7 +177,7 @@ class CreateAccount extends Component {
                                 Please check your e-mail to finish the signup process.
                                 <br/><br/>
                                 <hr className="featurette-divider" />
-                                <NavLink className="nav-link" to="/home">
+                                <NavLink className="btn btn-primary" to="/home">
                                     Back to home
                                 </NavLink>
                             </div>

@@ -44,8 +44,8 @@ class Header extends Component {
                             </NavLink>
                         </li>
                     </ul>
-                    <form className="form-inline mt-2 mt-md-0">
-                        <input type="text" className="form-control mr-sm-2" placeholder="(search)" />
+                    <form className="form-inline mt-2 mt-md-0" action="/results">
+                        <input type="text" name="search" id="search" className="form-control mr-sm-2" placeholder="(search)" />
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>    
                 </div>

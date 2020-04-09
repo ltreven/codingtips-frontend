@@ -163,7 +163,7 @@ class Login extends Component {
                             <div className="container">
                                 Successfully logged in!
                                 <hr className="featurette-divider" />
-                                <NavLink className="nav-link" to="/home">
+                                <NavLink className="btn btn-primary" to="/home">
                                     Back to home
                                 </NavLink>
                             </div>
