@@ -20,7 +20,8 @@ class TipsList extends Component {
         fetch(url)
         .then(res => res.json())
         .then(tips => this.setState({
-            tips: tips
+            tips: tips,
+            error: null
             }))
         .catch((err) => {
             const msg = "Could not load data from " + url;
