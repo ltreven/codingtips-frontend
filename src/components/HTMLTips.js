@@ -7,7 +7,7 @@ class HTMLTips extends Component {
     render () {
         return (
             <div className="container-fluid mt-5 mb-5">
-                <TipList/>
+                <TipList tech="html"/>
             </div>
         );    
     }

@@ -16,7 +16,10 @@ class TipsList extends Component {
     }
 
     loadTips = () => {
-        const url = baseUrl + 'tips/';
+        let url = baseUrl + 'tips/';
+        if (this.props.tech) {
+            url += '?technology=' + this.props.tech;
+        }
         fetch(url)
         .then(res => res.json())
         .then(tips => this.setState({
