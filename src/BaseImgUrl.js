@@ -1,1 +1,1 @@
-export const baseImgUrl = 'http://localhost:3000/img/';
+export const baseImgUrl = 'http://api.codingtips.online/img/';
