@@ -11,6 +11,14 @@ class Results extends Component {
             || ''
         };
     }
+
+    componentDidUpdate(prevProps) {
+        const search = (new URLSearchParams(window.location.search)).get('search')
+            || ''
+        if (this.state.search !== search) {
+            this.setState({search: search});
+        }
+    }
     
     render () {
         return (
