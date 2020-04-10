@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
 import '../css/style.css';
 
 class Header extends Component {
@@ -10,6 +9,13 @@ class Header extends Component {
             search: ""
         }
         this.handleSearchChange = this.handleSearchChange.bind(this);
+        this.search = this.search.bind(this);
+    }
+
+    search(e) {
+        if(e.key === 'Enter') {
+            e.preventDefault();
+        }
     }
 
     handleSearchChange(e) {
@@ -61,6 +67,7 @@ class Header extends Component {
                         <input type="text" name="search" id="search" 
                             className="form-control mr-sm-2" 
                             onChange={this.handleSearchChange}
+                            onKeyDown={this.search}
                             placeholder="(search)" />
                             <NavLink className="btn btn-outline-success my-2 my-sm-0" to={link}>
                                 Search
