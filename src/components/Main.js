@@ -27,7 +27,7 @@ class Main extends Component {
                     <Route exact path="/signup" component={() => <Signup/>} />
                     <Route exact path="/create-account" component={() => <CreateAccount/>} />
                     <Route exact path="/login" component={() => <Login/>} />
-                    <Route exact path="/results" component={() => <Results/>} />
+                    <Route path="/results" component={() => <Results/>} />
                     <Redirect to="/home" />
                 </Switch>
                 <Footer/>

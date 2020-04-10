@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../css/style.css';
 
 class Header extends Component {
-
+    
     render () {
         return (
             <nav className="navbar navbar-expand-md navbar-dark bg-dark">
@@ -45,8 +45,10 @@ class Header extends Component {
                         </li>
                     </ul>
                     <form className="form-inline mt-2 mt-md-0" action="/results">
-                        <input type="text" name="search" id="search" className="form-control mr-sm-2" placeholder="(search)" />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <input type="text" name="search" id="search" 
+                            className="form-control mr-sm-2" 
+                            placeholder="(search)" />
+                        <button type="submit" className="btn btn-outline-success my-2 my-sm-0">Search</button>
                     </form>    
                 </div>
             </nav>
