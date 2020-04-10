@@ -8,8 +8,16 @@ class Results extends Component {
         super(props);
         this.state = {
             search: (new URLSearchParams(window.location.search)).get('search')
-            || ''
+            || '',
         };
+    }
+
+    componentDidUpdate(prevProps) {
+        let search = (new URLSearchParams(window.location.search)).get('search')
+            || '';
+        if (this.state.search !== search) {
+            this.setState({search: search});
+        }
     }
     
     render () {

@@ -17,7 +17,7 @@ class Header extends Component {
     }
     
     render () {
-        const link = "/results?" + this.state.search;
+        const link = "/results?search=" + this.state.search;
         return (
             <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                 <NavLink className="navbar-brand" to="/home">

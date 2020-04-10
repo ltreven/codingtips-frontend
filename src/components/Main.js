@@ -29,7 +29,7 @@ class Main extends Component {
                     <Route exact path="/create-account" component={() => <CreateAccount/>} />
                     <Route exact path="/login" component={() => <Login/>} />
                     <Route exact path="/tip" component={() => <Tip/>} />
-                    <Route path="/results" component={() => <Results/>} />
+                    <Route exact path="/results" component={() => <Results/>} />
                     <Redirect to="/home" />
                 </Switch>
                 <Footer/>

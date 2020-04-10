@@ -18,26 +18,33 @@ class TipsList extends Component {
             error: null
         };
 
-        this.loadTips();
+        this.loadTips(this.props.search, this.props.tech);
     }
 
-    loadTips() {
-        const nexttips = this.state.tips;
+    componentDidUpdate(prevProps) {
+        if (this.state.search !== this.props.search) {
+            this.loadTips(this.props.search, this.props.tech);
+        }
+    }
+
+    loadTips(search, tech) {
+        //const nexttips = this.state.tips;
         let filter = 'limit=' + this.state.limit +
                     '&offset=' + this.state.offset;
 
-        if (this.state.search) {
-            filter += '&search=' + this.state.search;
+        if (search) {
+            filter += '&search=' + search;
         }
-        if (this.state.tech) {
-            filter += '&technology=' + this.state.tech;
+        if (tech) {
+            filter += '&technology=' + tech;
         }
             
         fetch(baseUrl + 'tips/?' + filter)
         .then(res => res.json())
         .then(tips => this.setState({
-            tips: [...nexttips, ...tips ],
-            //offset: this.state.offset + this.state.limit,
+            tips: tips,
+            search: search,
+            tech: tech,
             nomore: tips.length === 0,
             error: null
             }))
@@ -48,10 +55,6 @@ class TipsList extends Component {
                 error: msg
             })
         });
-    }
-
-    loadMore(event) {
-        this.loadTips();
     }
 
     render () {
