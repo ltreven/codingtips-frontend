@@ -41,7 +41,7 @@ class Tip extends Component {
             return (
                 <div className="container">
                     <br/>
-                    <h1>Sorry, this tip was not found...</h1>
+                    <h2>Sorry, this tip was not found...</h2>
                 </div>
             )
         }

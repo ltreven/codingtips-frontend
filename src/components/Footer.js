@@ -8,7 +8,7 @@ class Footer extends Component {
             <footer className="container">
                 <hr className="featurette-divider" />
                 <p className="float-right">
-                    <NavLink className="nav-link" to="/signup">
+                    <NavLink className="nav-link" to="/collaborate">
                         Collaborate
                     </NavLink>
                 </p>
