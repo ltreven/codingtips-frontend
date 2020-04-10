@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormFeedback, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { baseUrl } from '../BaseUrl.js';
-import Cookies from 'universal-cookie';
 import '../css/style.css';
 
 class CreateAccount extends Component {

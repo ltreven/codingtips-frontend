@@ -23,7 +23,7 @@ class TipsList extends Component {
 
     loadTips() {
         const nexttips = this.state.tips;
-        let filter = '?limit=' + this.state.limit +
+        let filter = 'limit=' + this.state.limit +
                     '&offset=' + this.state.offset;
 
         if (this.state.search) {
