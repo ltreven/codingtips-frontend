@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import '../css/style.css';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            search: ""
+        }
+        this.handleSearchChange = this.handleSearchChange.bind(this);
+    }
+
+    handleSearchChange(e) {
+        this.setState({search: e.target.value});
+    }
     
     render () {
+        const link = "/results?" + this.state.search;
         return (
             <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                 <NavLink className="navbar-brand" to="/home">
@@ -44,11 +57,14 @@ class Header extends Component {
                             </NavLink>
                         </li>
                     </ul>
-                    <form className="form-inline mt-2 mt-md-0" action="/results">
+                    <form className="form-inline mt-2 mt-md-0">
                         <input type="text" name="search" id="search" 
                             className="form-control mr-sm-2" 
+                            onChange={this.handleSearchChange}
                             placeholder="(search)" />
-                        <button type="submit" className="btn btn-outline-success my-2 my-sm-0">Search</button>
+                            <NavLink className="btn btn-outline-success my-2 my-sm-0" to={link}>
+                                Search
+                            </NavLink>                            
                     </form>    
                 </div>
             </nav>
