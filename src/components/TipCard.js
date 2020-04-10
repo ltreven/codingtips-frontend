@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../css/style.css';
 
 class TipCard extends Component {
@@ -9,7 +10,9 @@ class TipCard extends Component {
                 <div className="card-body">
                     <h4 className="card-title">{this.props.tip.title}</h4>
                     <p className="card-text">{this.props.tip.summary}</p>
-                    <a href={link} className="btn btn-link">See More</a>
+                    <NavLink className="btn btn-link" to={link}>
+                        See More
+                    </NavLink>
                 </div>
             </div>
         );
