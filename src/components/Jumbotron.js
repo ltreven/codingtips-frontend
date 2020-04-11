@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../css/style.css';
 
 class Jumbotron extends Component {
     render () {

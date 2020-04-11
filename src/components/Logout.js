@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
-import '../css/style.css';
 
 class Logout extends Component {
 

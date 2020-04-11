@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TipCard from './TipCard';
 import { baseUrl } from '../BaseUrl.js';
 
-
 class TipsList extends Component {
 
     constructor(props) {

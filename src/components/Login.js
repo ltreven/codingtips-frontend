@@ -3,7 +3,6 @@ import { Button, Form, FormGroup, Label, Input, FormFeedback, Modal, ModalHeader
 import { NavLink } from 'react-router-dom';
 import { baseUrl } from '../BaseUrl.js';
 import Cookies from 'universal-cookie';
-import '../css/style.css';
 
 class Login extends Component {
 

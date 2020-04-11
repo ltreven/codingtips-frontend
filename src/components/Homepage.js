@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TipList from './TipsList';
 import Jumbotron from './Jumbotron';
-import '../css/style.css';
 
 class Homepage extends Component {
 

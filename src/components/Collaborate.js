@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Cookies from 'universal-cookie';
-import '../css/style.css';
 
 class Collaborate extends Component {
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TipList from './TipsList';
-import '../css/style.css';
 
 class JavascriptTips extends Component {
 
