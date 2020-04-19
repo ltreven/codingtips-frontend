@@ -22,17 +22,17 @@ class Main extends Component {
             <div>
                 <Header />
                 <Switch>
-                    <Route exact path="/home" component={() => <Homepage/>} />
-                    <Route exact path="/js" component={() => <JavascriptTips/>} />
-                    <Route exact path="/html" component={() => <HTMLTips/>} />
-                    <Route exact path="/css" component={() => <CSSTips/>} />
-                    <Route exact path="/bootstrap" component={() => <BootstrapTips/>} />
-                    <Route exact path="/collaborate" component={() => <Collaborate/>} />
-                    <Route exact path="/create-account" component={() => <CreateAccount/>} />
-                    <Route exact path="/login" component={() => <Login/>} />
-                    <Route exact path="/tip" component={() => <Tip/>} />
-                    <Route exact path="/results" component={() => <Results/>} />
-                    <Route exact path="/logout" component={() => <Logout/>} />
+                    <Route exact path="/home" component={Homepage} />
+                    <Route exact path="/js" component={JavascriptTips} />
+                    <Route exact path="/html" component={HTMLTips} />
+                    <Route exact path="/css" component={CSSTips} />
+                    <Route exact path="/bootstrap" component={BootstrapTips} />
+                    <Route exact path="/collaborate" component={Collaborate} />
+                    <Route exact path="/create-account" component={CreateAccount} />
+                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/tip" component={Tip} />
+                    <Route exact path="/results" component={Results} />
+                    <Route exact path="/logout" component={Logout} />
                     <Route path="/edit/:id" component={(props) => <EditTip tipId={props.match.params.id}/>} />
                     <Redirect to="/home" />
                 </Switch>
